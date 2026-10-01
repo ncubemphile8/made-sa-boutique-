@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MŌDE SA — Modern South African Boutique</title>
+<meta name="description" content="MŌDE SA — a clean South African online boutique for new pieces, curated thrift and accessories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171614;--paper:#fbfaf8;--cream:#f2eee8;--line:#ddd7cf;--muted:#77716a;--accent:#8a7561;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}
+.top{background:var(--ink);color:#fff;text-align:center;font-size:11px;letter-spacing:.16em;padding:10px 14px;text-transform:uppercase}
+.nav{height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(251,250,248,.94);backdrop-filter:blur(12px);z-index:20}
+.logo{font-family:"Playfair Display",serif;font-size:26px;letter-spacing:.12em}.logo small{display:block;font-family:"DM Sans";font-size:8px;letter-spacing:.35em;text-align:center;margin-top:-2px}
+.links{display:flex;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:.13em}.nav-actions{display:flex;gap:10px;align-items:center}.bag-btn{border:1px solid var(--ink);background:transparent;padding:11px 15px;text-transform:uppercase;font-size:11px;letter-spacing:.12em}
+.hero{min-height:680px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}.hero-copy{padding:9vw 8vw;display:flex;justify-content:center;flex-direction:column}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.24em;color:var(--muted);margin-bottom:22px}.hero h1{font:500 clamp(52px,7vw,100px)/.9 "Playfair Display",serif;letter-spacing:-.045em;margin:0 0 28px;max-width:720px}.hero p{max-width:450px;color:#625e58;line-height:1.75;font-size:15px}.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;padding:14px 22px;text-transform:uppercase;letter-spacing:.14em;font-size:11px;margin-top:16px;width:max-content}.hero-img{min-height:680px;background:url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85") center/cover}
+.marquee{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line);border-top:1px solid var(--line);padding:15px 0;font-size:10px;text-transform:uppercase;letter-spacing:.24em;color:var(--muted)}
+.marquee span{display:inline-block;margin-right:60px}
+.section{padding:92px 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.section h2{font:500 clamp(35px,5vw,60px)/1 "Playfair Display",serif;margin:0;letter-spacing:-.035em}.section-head p{max-width:380px;color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filter{background:transparent;border:1px solid var(--line);padding:10px 16px;font-size:10px;text-transform:uppercase;letter-spacing:.13em}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{position:relative;min-width:0}.pic{aspect-ratio:4/5;background:#e9e4dc;overflow:hidden;position:relative}.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.card:hover .pic img{transform:scale(1.035)}.tag{position:absolute;left:12px;top:12px;background:var(--paper);padding:7px 9px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}.info{padding:15px 1px 8px}.info-row{display:flex;justify-content:space-between;gap:10px}.name{font-size:13px}.price{font-size:13px;font-weight:600}.sub{font-size:10px;color:var(--muted);margin-top:5px}.actions{display:flex;gap:7px;margin-top:13px}.add,.wa{flex:1;padding:11px 8px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink)}.add{background:var(--ink);color:#fff}.wa{background:transparent}.wa:hover{background:#e8e2da}
+.story{background:var(--ink);color:#fff;display:grid;grid-template-columns:1fr 1fr}.story-img{min-height:570px;background:url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85") center/cover}.story-copy{padding:9vw;display:flex;flex-direction:column;justify-content:center}.story-copy .eyebrow{color:#aaa}.story h2{font:500 clamp(38px,5vw,64px)/1.02 "Playfair Display",serif;margin:0 0 22px}.story p{color:#c5c0b8;line-height:1.8;max-width:500px;font-size:14px}.signature{font-family:"Playfair Display";font-size:22px;margin-top:18px}
+.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.collection{height:420px;position:relative;overflow:hidden;background-size:cover;background-position:center;display:flex;align-items:end;padding:25px;color:#fff}.collection:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.62))}.collection div{position:relative;z-index:1}.collection h3{font:500 32px "Playfair Display";margin:0 0 6px}.collection p{font-size:10px;text-transform:uppercase;letter-spacing:.15em;margin:0}
+.news{background:var(--cream);text-align:center;padding:85px 20px}.news h2{font:500 48px "Playfair Display";margin:0 0 12px}.news p{color:var(--muted);font-size:13px}.form{max-width:500px;margin:25px auto 0;display:flex;border-bottom:1px solid var(--ink)}.form input{flex:1;border:0;background:transparent;padding:13px 2px;outline:0}.form button{border:0;background:transparent;text-transform:uppercase;font-size:10px;letter-spacing:.14em}
+footer{padding:45px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:30px;font-size:11px;color:var(--muted)}footer strong{color:var(--ink);font-family:"Playfair Display";font-size:20px}
+.toast{position:fixed;right:22px;bottom:22px;background:var(--ink);color:#fff;padding:14px 18px;font-size:11px;letter-spacing:.05em;transform:translateY(130%);transition:.3s;z-index:50;box-shadow:0 15px 40px #0002}.toast.show{transform:translateY(0)}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(410px,92vw);background:var(--paper);z-index:40;box-shadow:-20px 0 60px #0002;transform:translateX(105%);transition:.35s;padding:28px;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px}.drawer h3{font:500 30px "Playfair Display";margin:0}.close{border:0;background:transparent;font-size:22px}.bag-items{flex:1;overflow:auto;padding:20px 0}.bag-item{display:flex;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}.bag-item img{width:72px;height:88px;object-fit:cover}.bag-item b{font-size:12px}.bag-item small{display:block;color:var(--muted);margin-top:5px}.checkout{border-top:1px solid var(--line);padding-top:18px}.checkout-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:15px}.checkout a{display:block;text-align:center;background:var(--ink);color:#fff;padding:14px;text-transform:uppercase;font-size:10px;letter-spacing:.13em}
+.sample{font-size:10px;color:#8b847b;text-align:center;padding:15px;border-top:1px solid var(--line)}
+@media(max-width:850px){.links{display:none}.hero,.story{grid-template-columns:1fr}.hero-img{min-height:500px;order:-1}.hero-copy{padding:65px 7vw}.grid{grid-template-columns:repeat(2,1fr)}.collections{grid-template-columns:1fr}.collection{height:330px}.story-img{min-height:430px}.story-copy{padding:65px 7vw}.section{padding:70px 5vw}.section-head{display:block}.section-head p{margin-top:15px}.nav{padding:0 4vw}.logo{font-size:22px}}
+@media(max-width:520px){.top{font-size:9px}.hero h1{font-size:54px}.grid{gap:14px}.actions{display:block}.add,.wa{width:100%;margin-top:6px}.news h2{font-size:38px}footer{display:block}.nav-actions .bag-btn{padding:9px 10px}}
+</style>
+</head>
+<body>
+<div class="top">Complimentary delivery on orders over R1,500 · South Africa</div>
+<nav class="nav">
+  <a class="logo" href="#">MŌDE<small>SOUTH AFRICA</small></a>
+  <div class="links"><a href="#shop">Shop</a><a href="#story">Our Edit</a><a href="#collections">Collections</a></div>
+  <div class="nav-actions"><button class="bag-btn" onclick="openBag()">Bag (<span id="count">0</span>)</button></div>
+</nav>
+
+<header class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">The South African edit · 01</div>
+    <h1>Dress well.<br>Live freely.</h1>
+    <p>A considered wardrobe of contemporary pieces, timeless essentials and one-of-one thrift finds. Curated for a new South African style.</p>
+    <a class="cta" href="#shop">Shop the edit →</a>
+  </div>
+  <div class="hero-img" aria-label="Fashion editorial"></div>
+</header>
+
+<div class="marquee"><span>NEW IN · </span><span>CURATED THRIFT · </span><span>ONE OF ONE · </span><span>MADE FOR YOUR EVERYDAY · </span><span>NEW IN · </span><span>CURATED THRIFT · </span></div>
+
+<section class="section" id="shop">
+  <div class="section-head">
+    <div><div class="eyebrow">Shop MŌDE</div><h2>The Edit</h2></div>
+    <p>New-season silhouettes meet hand-picked pre-loved pieces. Every item is selected for wearability, character and staying power.</p>
+  </div>
+  <div class="filters">
+    <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="new">New In</button><button class="filter" data-filter="thrift">Thrift</button><button class="filter" data-filter="accessories">Accessories</button>
+  </div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section class="story" id="story">
+  <div class="story-img"></div>
+  <div class="story-copy"><div class="eyebrow">Our philosophy</div><h2>Less, but better.</h2><p>MŌDE is built around the idea that a wardrobe should feel personal. We mix clean contemporary design with the thrill of finding something that already has a story.</p><p>From Johannesburg to Cape Town and everywhere between, this is fashion with a South African point of view.</p><div class="signature">MŌDE SA</div></div>
+</section>
+
+<section class="section" id="collections">
+  <div class="section-head"><div><div class="eyebrow">Explore</div><h2>Collections</h2></div></div>
+  <div class="collections">
+    <a class="collection" style="background-image:url('https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=85')" href="#shop"><div><h3>New In</h3><p>Clean lines · fresh arrivals</p></div></a>
+    <a class="collection" style="background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85')" href="#shop"><div><h3>Thrift</h3><p>One of one · pre-loved</p></div></a>
+    <a class="collection" style="background-image:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85')" href="#shop"><div><h3>Accessories</h3><p>The finishing touch</p></div></a>
+  </div>
+</section>
+
+<section class="news">
+  <div class="eyebrow">Stay in the edit</div><h2>First look, always.</h2><p>New arrivals, thrift drops and MŌDE notes — straight to your inbox.</p>
+  <form class="form" onsubmit="event.preventDefault(); toast('You’re on the list. Welcome to MŌDE.');"><input type="email" placeholder="Your email address" required><button>Subscribe →</button></form>
+</section>
+<div class="sample">DEMO STORE · Product names, prices and imagery shown are sample catalogue content for presentation purposes.</div>
+<footer><div><strong>MŌDE SA</strong><br><span>Contemporary South African style.</span></div><div>Instagram · WhatsApp · Returns · Contact</div><div>© 2026 MŌDE SA</div></footer>
+
+<div class="toast" id="toast"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h3>Your bag</h3><button class="close" onclick="closeBag()">×</button></div>
+  <div class="bag-items" id="bagItems"><p style="color:#777;font-size:13px">Your bag is empty.</p></div>
+  <div class="checkout"><div class="checkout-row"><span>Total</span><b id="total">R0</b></div><a href="#" onclick="orderBag(event)">Order via WhatsApp →</a></div>
+</aside>
+
+<script>
+const products=[
+{name:"Linen Co-Ord Set",price:1290,cat:"new",label:"NEW IN",img:"https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85"},
+{name:"Vintage Blazer",price:680,cat:"thrift",label:"ONE OF ONE",img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=85"},
+{name:"Sculpted Shoulder Bag",price:890,cat:"accessories",label:"ACCESSORIES",img:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85"},
+{name:"Silk Midi Dress",price:750,cat:"new",label:"NEW IN",img:"https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=800&q=85"},
+{name:"Oversized Knit",price:620,cat:"thrift",label:"ONE OF ONE",img:"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=85"},
+{name:"Vintage Denim",price:590,cat:"thrift",label:"ONE OF ONE",img:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=85"},
+{name:"Leather Loafers",price:950,cat:"accessories",label:"ACCESSORIES",img:"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=85"},
+{name:"Statement Jacket",price:1150,cat:"new",label:"NEW IN",img:"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=85"}
+];
+let bag=[];
+const money=n=>"R"+n.toLocaleString("en-ZA");
+function render(filter="all"){
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.filter===filter));
+ document.getElementById("products").innerHTML=products.filter(p=>filter==="all"||p.cat===filter).map((p,i)=>`
+ <article class="card"><div class="pic"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="tag">${p.label}</span></div>
+ <div class="info"><div class="info-row"><span class="name">${p.name}</span><span class="price">${money(p.price)}</span></div><div class="sub">${p.cat==="thrift"?"Pre-loved · one of one":"MŌDE SA collection"}</div>
+ <div class="actions"><button class="add" onclick="addBag(${i})">Add to Bag</button><button class="wa" onclick="whatsapp(${i})">WhatsApp Order</button></div></div></article>`).join("");
+}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>render(b.dataset.filter)));
+function addBag(i){bag.push(products[i]);updateBag();toast(products[i].name+" added to your bag.");}
+function updateBag(){
+ document.getElementById("count").textContent=bag.length;
+ document.getElementById("bagItems").innerHTML=bag.length?bag.map((p,i)=>`<div class="bag-item"><img src="${p.img}" alt=""><div><b>${p.name}</b><small>${money(p.price)}</small><button onclick="removeBag(${i})" style="border:0;background:none;padding:8px 0;color:#777;font-size:10px">REMOVE</button></div></div>`).join(""):"<p style='color:#777;font-size:13px'>Your bag is empty.</p>";
+ document.getElementById("total").textContent=money(bag.reduce((s,p)=>s+p.price,0));
+}
+function removeBag(i){bag.splice(i,1);updateBag();}
+function openBag(){document.getElementById("drawer").classList.add("open");}
+function closeBag(){document.getElementById("drawer").classList.remove("open");}
+function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2400);}
+const WHATSAPP_NUMBER="REPLACE_WITH_CLIENT_NUMBER";
+function whatsapp(i){const p=products[i];const msg=encodeURIComponent("Hi MŌDE SA, I'd like to order: "+p.name+" — "+money(p.price));if(WHATSAPP_NUMBER==="REPLACE_WITH_CLIENT_NUMBER"){toast("Demo WhatsApp: add the client's number in the code.");return}window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank");}
+function orderBag(e){e.preventDefault();if(!bag.length){toast("Your bag is empty.");return}if(WHATSAPP_NUMBER==="REPLACE_WITH_CLIENT_NUMBER"){toast("Demo WhatsApp: add the client's number in the code.");return}const msg=encodeURIComponent("Hi MŌDE SA, I'd like to order:\n"+bag.map(p=>p.name+" — "+money(p.price)).join("\n")+"\nTotal: "+money(bag.reduce((s,p)=>s+p.price,0)));window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank")}
+render();updateBag();
+</script>
+</body>
+</html>
